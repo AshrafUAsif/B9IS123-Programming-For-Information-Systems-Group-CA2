@@ -1,26 +1,27 @@
 /* ------------------------
  01. =google fonts 
  02. =variables
- 03. =base
- 04. =box
- 05. =customized bootstrap classes
- 06. =animation 
- 07. =section, padding, title
- 08. =buttons
- 09. =page loader
- 10. =circular img
- 11. =forms
- 12. =video modal
- 13. =pagination
- 14. =tabs
- 15. =bubble animation
- 16. =header
- 17. =footer
- 18. =banner section
- 19. =fun facts section
- 20. =courses section
- 21. =course details section
- 22. =contact section
+ 03. =overrides variables for - theme dark
+ 04. =base
+ 05. =box
+ 06. =customized bootstrap classes
+ 07. =animation 
+ 08. =section, padding, title
+ 09. =buttons
+ 10. =page loader
+ 11. =circular img
+ 12. =forms
+ 13. =video modal
+ 14. =pagination
+ 15. =tabs
+ 16. =bubble animation
+ 17. =header
+ 18. =footer
+ 19. =banner section
+ 20. =fun facts section
+ 21. =courses section
+ 22. =course details section
+ 23. =contact section
  -------------------------*/
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -42,9 +43,23 @@
     --select-box-bg-color: hsl(0, 0%, 100%);
     --border-color-1: hsl(0, 0%, 90%);
  }
+ /* --------------------------------------------
+ 03. =overrides variables for - theme dark 
+ ---------------------------------------------*/
+body.t-dark{
+   --body-bg-color: hsl(240, 10%, 19%);
+   --black-70: hsl(0, 0%, 87%);
+   --black-90: hsl(0, 0%, 100%);
+   --shadow: 0 0 10px hsla(0, 0%, 0%, 0.08);
+   --white: hsl(240, 8%, 21%);
+   --select-box-bg-color: hsl(240, 8%, 21%);
+   --border-color-2: hsl(240, 9%, 25%);
+   --border-color-1: hsl(240, 9%, 30%);
+}
+
 
 /* -----------------
- 03. =base 
+ 04. =base 
  ---------------------*/
 body{
    background-color: var(--body-bg-color);
@@ -82,6 +97,15 @@ h3{
    background-color: var(--main-color);
 }
 
+/*  -----------------------
+ 04. =box 
+ --------------------------- */
+ .box{
+   background-color: var(--white);
+   border-radius: 5px;
+   box-shadow: var(--shadow);
+   padding: 30px;
+ }
  
 /* ------------------------- 
   20. =courses section 
