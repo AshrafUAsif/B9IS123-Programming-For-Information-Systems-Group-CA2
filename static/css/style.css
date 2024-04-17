@@ -98,14 +98,25 @@ h3{
 }
 
 /*  -----------------------
- 04. =box 
+ 05. =box 
  --------------------------- */
- .box{
+.box{
    background-color: var(--white);
    border-radius: 5px;
    box-shadow: var(--shadow);
    padding: 30px;
  }
+ /* ------------------------------------ 
+ 06. =customized bootstrap classes 
+ -------------------------------------- */
+.container{
+   --bs-gutter-x: 15px;
+   max-width: 1140px;
+}
+.row{
+   --bs-gutter-x: 30px;
+}
+
  
 /* ------------------------- 
   20. =courses section 
