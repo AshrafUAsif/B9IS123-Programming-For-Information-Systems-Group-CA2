@@ -116,6 +116,31 @@ h3{
 .row{
    --bs-gutter-x: 30px;
 }
+/* ---------------------------------
+ 07. =animation keyframes 
+ ---------------------------------- */
+ @keyframes spin{
+   0%{
+       transform: rotate(0deg);
+   }
+   100%{
+       transform: rotate(360deg);
+   }
+}
+@keyframes bubble{
+   0%{
+      transform: translate(0vh);
+      opacity: 0;
+   }
+   5%,95%{
+      opacity: 1;
+   }
+   100%{
+      transform: translateY(-100vh);
+      opacity: 0;
+   }
+}
+
 
  
 /* ------------------------- 
