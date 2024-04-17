@@ -197,6 +197,15 @@ h3{
    color: var(--WHITE);
    background-color: var(--button-hover-color);
 }
+.btn-theme:focus{
+   box-shadow: 0 0 8px var(--main-color);
+}
+.btn-block{
+   width: 100%;
+}
+.btn-form{
+   height: 48px;
+}
  
 /* ------------------------- 
   20. =courses section 
