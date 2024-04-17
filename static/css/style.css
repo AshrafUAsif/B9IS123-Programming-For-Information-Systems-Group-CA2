@@ -55,8 +55,32 @@ body{
    min-height: 100vh;
    overflow-x: hidden;
 }
-
-
+a{
+   color: var(--main-color);
+   text-decoration: none;
+}
+a:hover{
+   color: var(--main-color);
+}
+img{
+   max-width: 100%;
+}
+ul{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+   color: var(--black-90);
+   line-height: 1.3;
+}
+h3{
+   font-size: 20px;
+}
+::selection{
+   color: var(--WHITE);
+   background-color: var(--main-color);
+}
 
  
 /* ------------------------- 
