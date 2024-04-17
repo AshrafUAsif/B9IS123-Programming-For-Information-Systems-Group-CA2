@@ -231,6 +231,16 @@ h3{
    position: relative;
    animation: loader 2s linear infinite;
 }
+.page-loader div::before{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-color: var(--main-color);
+   left: 0;
+   top: 0;
+   animation: loaderIn 2s linear infinite;
+}
  
 /* ------------------------- 
   20. =courses section 
