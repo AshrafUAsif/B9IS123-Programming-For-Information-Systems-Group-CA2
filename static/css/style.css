@@ -140,7 +140,25 @@ h3{
       opacity: 0;
    }
 }
-
+@keyframes loader{
+   0%{
+      transform: rotate(0deg);
+   }
+   25%, 50%{
+      transform: rotate(180deg);
+   }
+   75%,100%{
+      transform: rotate(360deg);
+   }
+}
+@keyframes loaderIn{
+   0%, 25%, 100%{
+      height: 0%;
+   }
+   50%, 75%{
+      height: 100%;
+   }
+}
 
  
 /* ------------------------- 
