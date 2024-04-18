@@ -438,6 +438,22 @@ textarea.form-control{
    animation: bubble 80s linear infinite;
 }
 
+/* -------------------- 
+ 17. =header  
+ --------------------------*/
+.header{
+   border-bottom: 1px solid var(--border-color-2);
+}
+.header-logo a{
+   font-size: 26px;
+   text-transform: uppercase;
+   font-weight: 700;
+   color: var(--black-70);
+}
+.header-logo span{
+   color: var(--main-color);
+} 
+
 /* ------------------------- 
   20. =courses section 
  ----------------------------*/
