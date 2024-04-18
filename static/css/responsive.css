@@ -32,4 +32,14 @@
     position: relative;
     margin: auto;
 }
+.header-hamburger-btn span::before,
+.header-hamburger-btn span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--black-90);
+}
+
 
