@@ -167,10 +167,15 @@
     .bai-section{
         text-align: center;
     }
-}
-
-}
-
-
-
-
+    .section-title .title,
+    h3,
+    .banner-text h2{
+      font-size: 18px;
+    }
+    form.title,
+    .section-title .sub-title{
+      font-size: 22px;
+    }
+    .course header h2{
+      font-size: 24px;
+    } 
