@@ -154,7 +154,20 @@
     }
 }   
 
-
+@media(max-width: 767px){
+    .container{
+        --bs-gutter-x: 15px;
+    }
+    .box{
+        padding: 20px 15px;
+    }
+    .banner-text h1{
+        font-size: 24px;
+    }
+    .bai-section{
+        text-align: center;
+    }
+}
 
 }
 
