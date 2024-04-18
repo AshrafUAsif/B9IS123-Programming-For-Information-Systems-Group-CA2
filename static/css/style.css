@@ -244,7 +244,7 @@ h3{
 /* ------------------------ 
  11. =circular img 
  --------------------------- */
- .circular-img{
+.circular-img{
    max-width: 360px;
    margin:auto;
    position: relative;
@@ -266,6 +266,49 @@ h3{
 .circular-img img{
    position: relative;
    z-index: 1;
+}
+
+/* ---------------------- 
+ 12. =forms 
+ --------------------------*/
+.form-title{
+   font-size: 24px;
+   margin:0 0 30px;
+   font-weight: 600;
+}
+.form-control::placeholder{
+  color: var(--black-70);
+}
+.form-group{
+  margin-bottom: 25px;
+  position: relative;
+}
+.form-control{
+  height: 48px;
+  border-color: var(--border-color-1);
+  color: var(--black-90);
+  background-color: transparent;
+}
+.form-control:focus{
+  background-color: transparent;
+  border-color: var(--border-color-1);
+  color: var(--black-90);
+  box-shadow: none;
+}
+.select-icon{
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 13px;
+}
+select.form-control:focus option{
+  background-color: var(--select-box-bg-color);
+}
+textarea.form-control{
+  height: 120px;
+  resize: none;
 }
  
 /* ------------------------- 
