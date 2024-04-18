@@ -123,7 +123,19 @@
     visibility: hidden;
     background-color: var(--white);
 }
+.header-backdrop.active{
+    visibility: active;
+    opacity: 0.8;
+}
+.circular-img{
+    max-width: 280px;
+}
+.circular-img img{
+    max-width: 240px;
+}
 
+
+}
 
 
 
