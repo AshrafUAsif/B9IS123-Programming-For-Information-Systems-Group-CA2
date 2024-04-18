@@ -41,5 +41,23 @@
     width: 100%;
     background-color: var(--black-90);
 }
+.header-hamburger-btn span::before{
+    top: -7px;
+}
+.header-hamburger-btn span::after{
+    top: 7px;
+}
+.header-close-btn{
+    height: 40px;
+    width: 40px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: var(--WHITE);
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 
