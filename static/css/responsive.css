@@ -198,3 +198,12 @@
     .course-curriculum ul li{
       padding: 0 0 0 20px;
     }
+    .rating-box{
+      margin-bottom: 15px;  
+    }
+    .rating-summary{
+      margin-bottom: 15px;  
+    }
+}
+
+
