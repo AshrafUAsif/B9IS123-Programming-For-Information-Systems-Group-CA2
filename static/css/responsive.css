@@ -206,4 +206,24 @@
     }
 }
 
-
+@media(max-width: 575px){
+    .circular-img{
+       max-width: 230px; 
+    }
+    .circular-img img{
+       max-width: 200px; 
+    }
+    .circular-img-circle{
+       width: 230px;
+       height: 230px;
+    }
+    .footer-item{
+       text-align: center;
+    }
+    .header-logo{
+       font-size: 22px; 
+    }
+    .modal-dialog{
+       margin: 8px 15px; 
+    }
+}
