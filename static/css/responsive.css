@@ -189,3 +189,12 @@
     .course-curriculum .accordion-button{
       padding-right: 15px;
     }
+    .course-curriculum ul li span{
+      font-size: 12px;
+      position: relative;
+      display: block;
+      margin-top: 5px;  
+    }
+    .course-curriculum ul li{
+      padding: 0 0 0 20px;
+    }
