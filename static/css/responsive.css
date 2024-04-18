@@ -133,6 +133,17 @@
 .circular-img img{
     max-width: 240px;
 }
+.circular-img-circle{
+    height: 280px;
+    width: 280px;
+}
+.banner-text h1{
+    font-size: 35px;
+}
+.section-title .sub-title{
+    font-size: 30px;
+}
+
 
 
 }
