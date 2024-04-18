@@ -1,0 +1,15 @@
+
+/* responsive */
+
+@media(max-width: 1199px){
+    .container{
+        max-width: 100%;
+        --bs-gutter-x: 30px;
+    }
+}
+
+@media(max-width: 991px){
+    .header{
+        padding: 12px 0;
+    }
+}
