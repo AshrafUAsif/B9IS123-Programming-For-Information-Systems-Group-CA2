@@ -512,6 +512,14 @@ textarea.form-control{
    display: none;
 }
 
+/* ----------------------- 
+ 18. =footer 
+ -------------------------*/
+.footer-top{
+   padding: 50px 0 20px;
+   border-top: 1px solid var(--border-color-2);
+}
+
 /* ------------------------- 
   20. =courses section 
  ----------------------------*/
