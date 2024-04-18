@@ -178,4 +178,14 @@
     }
     .course header h2{
       font-size: 24px;
+    }
+    .course-curriculum .accordion-button span{
+      position: realtive;
+      right: auto;
+      font-size: 12px;
+      width: 100%;
+      margin-top: 8px;
     } 
+    .course-curriculum .accordion-button{
+      padding-right: 15px;
+    }
