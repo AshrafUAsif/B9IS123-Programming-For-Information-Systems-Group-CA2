@@ -12,4 +12,20 @@
     .header{
         padding: 12px 0;
     }
+.header-backdrop,
+.header-close-btn,
+.header-hamburger-btn{
+    display: block;
 }
+.header-hamburger-btn{
+    height: 34px;
+    width: 40px;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+}
+.header-hamburger-btn span{
+    display: block;
+    
+}
+
