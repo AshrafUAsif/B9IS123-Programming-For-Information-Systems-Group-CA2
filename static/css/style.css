@@ -453,6 +453,29 @@ textarea.form-control{
 .header-logo span{
    color: var(--main-color);
 } 
+.header .menu-item{
+   display: inline-block;
+   margin-left: 40px;
+   position: relative;
+}
+.header .menu-item > a{
+   display: block;
+   padding: 24px 0;
+   font-weight: 400;
+   color: var(--black-90);
+   text-transform: capitalize;
+   transition: color 0.3s ease;
+}
+.header .sub-menu-item a:hover,
+.header .menu-item:hover > a{
+   color: var(--main-color);
+}
+.header .menu-item > a i{
+   font-size: 13px;
+   margin-left: 3px;
+   pointer-events: none;
+   transition: transform 0.3s ease;
+}
 
 /* ------------------------- 
   20. =courses section 
