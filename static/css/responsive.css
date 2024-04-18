@@ -26,6 +26,10 @@
 }
 .header-hamburger-btn span{
     display: block;
-    
+    height: 2px;
+    width: 24px;
+    background-color: var(--black-90);
+    position: relative;
+    margin: auto;
 }
 
