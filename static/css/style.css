@@ -372,6 +372,43 @@ textarea.form-control{
    color: var(--WHITE);
 }
 
+/* ---------------------- 
+ 16. =bubble animation 
+ ---------------------------*/
+.bubble-animation-item{
+   position: absolute;
+   height: 20px;
+   width: 20px;
+   border-radius: 50%;
+   border: 2px solid transparent;
+   z-index: -1;
+}
+.bubble-animation-item:nth-child(1){
+   border-color: var(--yellow-light);
+   top: 120%;
+   left: 10%;
+   animation: bubble 30s linear infinite;
+}
+.bubble-animation-item:nth-child(2){
+   border-color: var(--green-light);
+   top: 60%;
+   left: 50%;
+   animation: bubble 40s linear infinite;
+}
+.bubble-animation-item:nth-child(3){
+   border-color: var(--red-light);
+   top: 90%;
+   left: 90%;
+   animation: bubble 50s linear infinite;
+}
+.bubble-animation-item:nth-child(4){
+   border-color: var(--yellow-light);
+   top: 80%;
+   left: 60%;
+   animation: bubble 60s linear infinite;
+}
+
+
 /* ------------------------- 
   20. =courses section 
  ----------------------------*/
