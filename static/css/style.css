@@ -568,8 +568,27 @@ textarea.form-control{
    font-size: 14px;
 }
 
+/* -------------------------- 
+ 19. =banner section 
+ ----------------------------*/
+.banner-section{
+   padding: 80px 0;
+   min-height: 680px;
+}
+.banner-text h2{
+   font-size: 20px;
+   color: var(--main-color);
+}
+.banner-text h1{
+   font-size: 45px;
+   font-weight: 700;
+}
+.banner-section .circular-img-circle{
+   background-color: var(--red-light);
+}
+
 /* ------------------------- 
-  20. =courses section 
+  21. =courses section 
  ----------------------------*/
 
  .course-item{
