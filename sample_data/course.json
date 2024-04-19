@@ -26,4 +26,13 @@
         "price": 39,
         "rating": 4.2
       },
+      {
+        "category": "Web Development",
+        "title": "PHP for Beginners",
+        "image": "../static/images/courses/web-development/php.jpg",
+        "instructor": "Ashraf Asif",
+        "reviews": 100,
+        "price": 70,
+        "rating": 4.4
+      },
 ]
