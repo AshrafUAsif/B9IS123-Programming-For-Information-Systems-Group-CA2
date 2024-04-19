@@ -4,7 +4,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('base.html')
+    return render_template('home.html', courses=courses)
+
+@app.route('/courses')
+def courses():
+    return render_template('courses.html', courses=courses)
+
+@app.route('/course-details')
+def course_details():
+    return render_template('course-details.html')
 
 #Adding routes for the all other pages
 @app.route('/about.html')
@@ -18,14 +26,6 @@ def contact():
 @app.route('/pricing.html')
 def pricing():
     return render_template('pricing.html')
-
-@app.route('/courses.html')
-def courses():
-    return render_template('courses.html')
-
-@app.route('/course-details.html')
-def course_details():
-    return render_template('course-details.html')
 
 @app.route('/log-in.html')
 def log_in():
