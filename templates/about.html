@@ -4,32 +4,11 @@
     <title> {% block title %}Edupulse{% endblock %}</title>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-    rel="stylesheet"
-    href="{{}}"
-    />
-    <link
-    rel="stylesheet"
-    href="{{}}"
-    />
-    <link
-    rel="stylesheet"
-    href="{{}}"
-    />
-    <link
-    rel="stylesheet"
-    href="{{}}"
-    />
-    <link
-    rel="stylesheet"
-    href="{{}}"
-    />
-    <link
-    rel="stylesheet"
-    class=""
-    href="{{}}"
-    disabled
-    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/colors/color-2.css') }}" />
   </head>
 
   <body>
@@ -39,7 +18,7 @@
         <div class="container">
             <div class="header-main d-flex justify-content-between align-items-center">
                 <div class="header-logo">
-                    <a href=""><span>edu</span>pulse</a>
+                    <a href="{{ url_for('home') }}"><span>edu</span>pulse</a>
                 </div>
                 <button type="button" class="header-hamburger-btn js-header-menu-toggler">
                     <span></span>   
@@ -50,7 +29,7 @@
                         <i class="fas fa-times"></i>
                     </button> 
                     <ul class="menu">
-                        <li class="menu-item"><a href="">home</a></li>
+                        <li class="menu-item"><a href="{{ url_for('home') }}">home</a></li>
                         <li class="menu-item menu-item-has-children">
                             <a href="#" class="js-toggler-sub-menu">courses <i class="fas fa-chevron-down"></i></a>
                             <ul class="sub-menu js-sub-menu">
@@ -77,8 +56,8 @@
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="">home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">about us</li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('home') }}">home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">About us</li>
                 </ol>
             </nav>
         </div>
@@ -87,7 +66,7 @@
     <!-- about us content --> 
     <section class="about-us-section section-padding">
         <div class="container">
-            <h2 class="title text-center">about us</h2>
+            <h2 class="title text-center">About Us</h2>
             <p class="text-center">empowering learners around the globe to achieve their educational and career goals</p>
 
     <!-- our story -->
@@ -179,8 +158,8 @@
 </footer>
 
 
-<script src=""></script>
-<script src=""></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>
     
