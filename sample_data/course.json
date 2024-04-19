@@ -8,4 +8,13 @@
         "price": 49,
         "rating": 4.3
       },
+      {
+        "category": "Web Development",
+        "title": "CSS for Beginners",
+        "image": "../static/images/courses/web-development/css.jpg",
+        "instructor": "Chitra Prakash",
+        "reviews": 150,
+        "price": 20,
+        "rating": 4.6
+      },
 ]
