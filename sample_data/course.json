@@ -1,0 +1,11 @@
+[
+    {
+        "category": "Web Development",
+        "title": "HTML for Beginners",
+        "image": "../static/images/courses/web-development/html.jpg",
+        "instructor": "Ashraf Asif",
+        "reviews": 230,
+        "price": 49,
+        "rating": 4.3
+      },
+]
