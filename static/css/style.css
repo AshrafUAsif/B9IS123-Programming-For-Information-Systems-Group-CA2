@@ -665,4 +665,15 @@ textarea.form-control{
     border-radius: 4px;
  }
 
+/* ---------------------------------- 
+22. =course details section 
+------------------------------------*/
+
+/* Apply rounded corners to the image */
+.rounded-image {
+   border-radius: 50%;
+   width: 128px; /* Adjust as needed */
+   height: auto; /* Maintain aspect ratio */
+   max-width: 100%; /* Ensure the image fits within its container */
+}
 
