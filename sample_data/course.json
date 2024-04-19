@@ -35,4 +35,13 @@
         "price": 70,
         "rating": 4.4
       },
+      {
+        "category": "Health",
+        "title": "Weight Loss Course",
+        "image": "img/courses/health/1.jpg",
+        "instructor": "Ashraf Asif",
+        "reviews": 500,
+        "price": 10,
+        "rating": 4.7
+      },
 ]
