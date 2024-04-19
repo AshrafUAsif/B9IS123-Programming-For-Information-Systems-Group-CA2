@@ -17,4 +17,13 @@
         "price": 20,
         "rating": 4.6
       },
+      {
+        "category": "Web Development",
+        "title": "JavaScript for Beginners",
+        "image": "../static/images/courses/web-development/javascript.jpg",
+        "instructor": "P S Aakash",
+        "reviews": 50,
+        "price": 39,
+        "rating": 4.2
+      },
 ]
