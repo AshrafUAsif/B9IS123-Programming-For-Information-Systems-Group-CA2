@@ -1,7 +1,35 @@
-from flask import Flask, render_template
-
+import os
+from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify, request
+from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
+from flask_login import LoginManager, login_user, logout_user, login_required, UserMixin, current_user
+import json
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'newpass123'
+db_path = os.path.join(os.path.dirname(__file__), 'edu.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{db_path}'
+db = SQLAlchemy(app)
+bcrypt = Bcrypt(app)
+login_manager = LoginManager(app)
+
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    fullname = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(100), nullable=False, unique=True)
+    password = db.Column(db.String(100), nullable=False)
+    is_admin = db.Column(db.Boolean, default=False)
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'fullname': self.fullname,
+            'email': self.email,
+            'is_admin': self.is_admin
+        }
+
+
+
 
 @app.route('/')
 def home():
