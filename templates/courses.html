@@ -46,14 +46,41 @@
 <section class="courses-section section-padding">
   <div class="container">
     <div class="row justify-content-center">
-      {% for course in courses %}
+      {% for course in courses[:4] %}
         <div class="col-md-6 col-lg-3">
           <div class="courses-item">
             <a href="{{ url_for('course_details', course_id=course.id) }}" class="link">
-              
+              <div class="courses-item-inner">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename=course.image) }}" alt="course img">
+                </div>
+                <h3 class="title">{{ course.title }}</h3>
+                <div class="instructor">
+                  <span class="instructor-name">{{ course.instructor.name }}</span>
+                </div>
+                <div class="rating">
+                  <span class="average-rating">({{ course.rating }})</span>
+                  <span class="average-stars">
+                    {% set full_stars = course.rating|int %}
+                    {% set has_half_star = (course.rating - full_stars >= 0.5) %}
+                    {% for _ in range(full_stars) %}
+                    <i class="fas fa-star"></i>
+                    {% endfor %}
+                    {% if has_half_star %}
+                    <i class="fas fa-star-half-alt"></i>
+                    {% endif %}
+                    {% for _ in range(5 - full_stars - has_half_star) %}
+                    <i class="far fa-star"></i>
+                    {% endfor %}
+                  </span>
+                  <span class="reviews">({{ course.reviews }})</span>
+                </div>
+                <div class="price">€{{ course.price }}</div>
+              </div>
             </a>
           </div>
         </div>
+      {% endfor %}
     </div>
   </div>
 </section>

@@ -113,21 +113,23 @@
                                     <span class="instructor-name">{{ course.instructor.name }}</span>
                                 </div>
                                 <div class="rating">
-                                    <span class="average-rating">({{ course.average_rating }})</span>
+                                    <span class="average-rating">({{ course.rating }})</span>
                                     <span class="average-stars">
-                                        {% for i in range(course.average_rating|round|int) %}
+                                        {% set full_stars = course.rating|int %}
+                                        {% set has_half_star = (course.rating - full_stars >= 0.5) %}
+                                        {% for _ in range(full_stars) %}
                                         <i class="fas fa-star"></i>
                                         {% endfor %}
-                                        {% if course.average_rating|round != course.average_rating %}
+                                        {% if has_half_star %}
                                         <i class="fas fa-star-half-alt"></i>
                                         {% endif %}
-                                        {% for i in range(course.average_rating|round|int, 5) %}
+                                        {% for _ in range(5 - full_stars - has_half_star) %}
                                         <i class="far fa-star"></i>
                                         {% endfor %}
                                     </span>
                                     <span class="reviews">({{ course.reviews }})</span>
                                 </div>
-                                <div class="price">{{ course.price }}</div>
+                                <div class="price">€{{ course.price }}</div>
                             </div>
                         </a>
                     </div>

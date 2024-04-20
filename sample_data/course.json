@@ -33,42 +33,6 @@
         "instructor": "Ashraf Asif",
         "reviews": 100,
         "price": 70,
-        "rating": 4.4
-      },
-      {
-        "category": "Health",
-        "title": "Weight Loss Course",
-        "image": "img/courses/health/1.jpg",
-        "instructor": "Ashraf Asif",
-        "reviews": 500,
-        "price": 10,
-        "rating": 4.7
-      },
-      {
-        "category": "Health",
-        "title": "Weight Loss and Nutrition Guide",
-        "image": "img/courses/health/2.jpg",
-        "instructor": "Chitra Prakash",
-        "reviews": 300,
-        "price": 15,
-        "rating": 4.5
-      },
-      {
-        "category": "Music",
-        "title": "Become a Singer",
-        "image": "img/courses/music/1.jpg",
-        "instructor": "P S Aakash",
-        "reviews": 400,
-        "price": 20,
-        "rating": 4.8
-      },
-      {
-        "category": "Music",
-        "title": "Become a Guitar Master",
-        "image": "img/courses/music/2.jpg",
-        "instructor": "Ashraf Asif",
-        "reviews": 1000,
-        "price": 99,
-        "rating": 4.6
-      }
+        "rating": 5
+      } 
 ]
