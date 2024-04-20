@@ -186,6 +186,29 @@ def get_courses():
     else:
         return "Only accessible via Postman", 403
 
+@app.route('/courses/<int:course_id>', methods=['GET', 'PUT', 'DELETE'])
+def course_detail(course_id):
+    if request.headers.get('Postman-Token'):
+        course = Course.query.get_or_404(course_id)
+        if request.method == 'GET':
+            return jsonify(course.serialize())
+        elif request.method == 'PUT':
+            data = request.get_json()
+            course.title = data.get('title', course.title)
+            course.category = data.get('category', course.category)
+            course.instructor = data.get('instructor', course.instructor)
+            course.rating = data.get('rating', course.rating)
+            course.reviews = data.get('reviews', course.reviews)
+            course.price = data.get('price', course.price)
+            course.image = data.get('image', course.image)
+            db.session.commit()
+            return jsonify(course.serialize())
+        elif request.method == 'DELETE':
+            db.session.delete(course)
+            db.session.commit()
+            return "Course deleted successfully", 204
+    else:
+        return "Only accessible via Postman", 403
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
