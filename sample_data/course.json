@@ -62,5 +62,13 @@
         "price": 20,
         "rating": 4.8
       },
-      
+      {
+        "category": "Music",
+        "title": "Become a Guitar Master",
+        "image": "img/courses/music/2.jpg",
+        "instructor": "Ashraf Asif",
+        "reviews": 1000,
+        "price": 99,
+        "rating": 4.6
+      }
 ]
