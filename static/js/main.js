@@ -26,4 +26,50 @@ function headerMenu(){
     item.addEventListener("click", toggleMenu);
   });
 
-}
+// close the menu by clicking outside of it
+  backdrop.addEventListener("click", toggleMenu);
+
+  function collapse(){
+    menu.querySelector(".active .js-sub-menu").removeAttribute("style");
+    menu.querySelector(".active").classList.remove("active");
+  }
+
+  menu.addEventListener("click", (event) => {
+    const { target } = event;
+    
+    if(target.classList.contains("js-toggle-sub-menu") && 
+    window.innerWidth <= menuCollapseBreakpoint){
+      // prevent default anchor click behavior
+      event.preventDefault();
+
+      // if menu-item already expanded, collapse it and exit 
+      if(target.parentElement.classList.contains("active")){
+        collapse();
+        return;
+      }
+      // if not already expaned... run below code
+      
+      // collapse the other expanded menu-item if exists
+      if(menu.querySelector(".active")){
+        collapse();
+      }
+
+      // expand new menu-item
+      target.parentElement.classList.add("active");
+      target.nextElementSibling.style.maxHeight = 
+      target.nextElementSibling.scrollHeight + "px";
+    }
+  });
+
+  // when resizing window
+  window.addEventListener("resize", function() {
+    if(this.innerWidth > menuCollapseBreakpoint && menu.classList.contains("open")){
+      toggleMenu();
+    }
+    if(this.innerWidth > menuCollapseBreakpoint && menu.querySelector(".active")){
+      collapse();
+    }
+  });
+} 
+headerMenu();
+
