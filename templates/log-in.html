@@ -22,7 +22,7 @@
     />
     <link 
       rel="stylesheet" 
-      href="{{ url_for('static', filename='css/colors/color-2.css') }}" 
+      href="{{ url_for('static', filename='css/colors/color-1.css') }}" 
     />
     <link
       rel="stylesheet"
@@ -31,10 +31,12 @@
       disabled
     />
   </head>
-<body>
-  <!--  header start -->
-  <header class="header">
-    <div class="container">
+
+  <body>
+  
+    <!--  header start -->
+    <header class="header">
+      <div class="container">
         <div class="header-main d-flex justify-content-between align-items-center">
             <div class="header-logo">
                 <a href="{{ url_for('home') }}"><span>edu</span>pulse</a>
@@ -49,20 +51,18 @@
                 </button>
                 <ul class="menu">
                     <li class="menu-item"><a href="{{ url_for('home') }}">home</a></li>
-                    <li class="menu-item menu-item-has-children">
-                        <a href="#" class="js-toggle-sub-menu">courses <i class="fas fa-chevron-down"></i></a>
-                        <ul class="sub-menu js-sub-menu">
-                            <li class="sub-menu-item"><a href="">courses</a></li>
-                            <li class="sub-menu-item"><a href="">course details</a></li>
-                        </ul>
+                    <li class="menu-item">
+                        <a href="{{ url_for('courses') }}">courses</a>
                     </li>
-                
-                </ul>
-            </nav>
-        </div>
-    </div>
-  </header>  
-  <!-- header end -->
+                    <li class="menu-item">
+                      <a href="{{ url_for('sign_up') }}">sign up</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </header>
+          <!-- header end -->
 
   <!-- breadcrumb start -->
   <div class="breadcrumb-nav">
