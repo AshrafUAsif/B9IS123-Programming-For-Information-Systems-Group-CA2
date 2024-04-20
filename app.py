@@ -132,7 +132,31 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
+@app.route('/sign-up', methods=['GET', 'POST'])
+def sign_up():
+    if request.method == 'POST':
+        fullname = request.form['fullname']
+        email = request.form['email']
+        password = request.form['password']
+        existing_user = User.query.filter_by(email=email).first()
+        if existing_user:
+            flash('Email address already in use. Please choose a different email.', 'error')
+            return redirect(url_for('sign_up'))
+        hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+        new_user = User(fullname=fullname, email=email, password=hashed_password)
+        db.session.add(new_user)
+        db.session.commit()
+        flash('Account created successfully. Please log in.', 'success')
+        return redirect(url_for('login'))
+    return render_template('sign-up.html')
 
+@app.route('/users', methods=['GET'])
+def get_users():
+    if request.headers.get('Postman-Token'):
+        users = User.query.all()
+        return jsonify([user.serialize() for user in users])
+    else:
+        return "Only accessible via Postman", 403
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
