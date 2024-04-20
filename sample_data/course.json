@@ -53,4 +53,13 @@
         "price": 15,
         "rating": 4.5
       },
+      {
+        "category": "Music",
+        "title": "Become a Singer",
+        "image": "img/courses/music/1.jpg",
+        "instructor": "P S Aakash",
+        "reviews": 400,
+        "price": 20,
+        "rating": 4.8
+      },
 ]
