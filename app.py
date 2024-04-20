@@ -28,6 +28,38 @@ class User(db.Model, UserMixin):
             'is_admin': self.is_admin
         }
 
+class Course(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    category = db.Column(db.String(100), nullable=False)
+    instructor = db.Column(db.String(100), nullable=False)
+    rating = db.Column(db.Float, nullable=False)
+    reviews = db.Column(db.Integer, nullable=False)
+    price = db.Column(db.Float, nullable=False)
+    image = db.Column(db.String(255), nullable=False)
+
+    @property
+    def average_rating(self):
+        if self.reviews == 0:
+            return 0
+        return round(self.rating / self.reviews, 2)
+    
+    def serialize(self):
+        return {
+            'id': self.id,
+            'title': self.title,
+            'category': self.category,
+            'instructor': self.instructor,
+            'rating': self.rating,
+            'reviews': self.reviews,
+            'price': self.price,
+            'image': self.image
+        }
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
 
 
 
