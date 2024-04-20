@@ -167,6 +167,30 @@ def get_users():
     else:
         return "Only accessible via Postman", 403
 
+# Delete User from the admin panel
+@app.route('/delete-user/<int:user_id>')
+@login_required
+def delete_user(user_id):
+    if not current_user.is_admin:
+        return redirect(url_for('home'))
+    user = User.query.get_or_404(user_id)
+    db.session.delete(user)
+    db.session.commit()
+    flash('User has been deleted successfully!', 'success')
+    return redirect(url_for('admin'))
+
+@app.route('/delete-course/<int:course_id>')
+@login_required
+def delete_course(course_id):
+    if not current_user.is_admin:
+        return redirect(url_for('home'))
+    course = Course.query.get_or_404(course_id)
+    db.session.delete(course)
+    db.session.commit()
+    flash('Course has been deleted successfully!', 'success')
+    return redirect(url_for('admin'))
+
+
 @app.route('/users/<int:user_id>', methods=['GET', 'PUT', 'DELETE'])
 def user_detail(user_id):
     if request.headers.get('Postman-Token'):
