@@ -50,6 +50,20 @@
           <button type="button" class="header-close-btn js-header-menu-toggler">
             <i class="fas fa-times"></i>
           </button>
+          <ul class="menu">
+            <li class="menu-item"><a href="{{ url_for('home') }}">home</a></li>
+            <li class="menu-item">
+              <a href="{{ url_for('courses') }}">courses</a>
+            </li>
+            <li class="menu-item">
+              <a href="{{ url_for('login') }}">log in</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
     
 </body>
 </html>
