@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "title": "HTML for Beginners",
+    "rating": 4.3,
+    "reviews": 230,
+    "enrolledStudents": 1500,
+    "creator": "Ashraf Asif",
+    "lastUpdated": "01/01/2022",
+    "language": "English",
+    "curriculum": [
+      {
+        "sectionTitle": "Introduction to HTML",
+        "lessons": [
+          {"title": "What is HTML?", "duration": "10:00"},
+          {"title": "Basic HTML Page Structure", "duration": "15:00"}
+        ]
+      },
+      {
+        "sectionTitle": "HTML Elements",
+        "lessons": [
+          {"title": "Headings and Paragraphs", "duration": "12:00"},
+          {"title": "Lists", "duration": "18:00"}
+        ]
+      }
+    ],
+    "description": "This course introduces HTML, covering all the basic aspects and functionalities to help you create your first website.",
+    "instructor": {
+      "name": "Ashraf Asif",
+      "role": "Web Developer",
+      "rating": 4.5,
+      "courses": 5,
+      "reviews": 1200,
+      "profileImage": "img/instructor/ashraf_asif.png",
+      "bio": "Ashraf Asif has been a front-end developer for over 10 years, specializing in HTML and CSS. He is passionate about teaching and has helped thousands of students begin their careers in web development."
+    }
+  },
+  {
+    "id": 2,
+    "title": "CSS for Beginners",
+    "rating": 4.6,
+    "reviews": 150,
+    "enrolledStudents": 1200,
+    "creator": "Chitra Prakash",
+    "lastUpdated": "05/05/2022",
+    "language": "English",
+    "curriculum": [
+      {
+        "sectionTitle": "CSS Basics",
+        "lessons": [
+          {"title": "Introduction to CSS", "duration": "10:00"},
+          {"title": "Selectors and Properties", "duration": "20:00"}
+        ]
+      },
+      {
+        "sectionTitle": "Styling Web Pages",
+        "lessons": [
+          {"title": "Text Styles", "duration": "15:00"},
+          {"title": "Box Model", "duration": "25:00"}
+        ]
+      }
+    ],
+    "description": "Learn how to style websites using CSS, from basic techniques to advanced concepts, to make visually compelling web pages.",
+    "instructor": {
+      "name": "Chitra Prakash",
+      "role": "Web Designer",
+      "rating": 4.8,
+      "courses": 8,
+      "reviews": 1500,
+      "profileImage": "img/instructor/chitra_prakash.png",
+      "bio": "Chitra Prakash is an experienced web designer known for her deep understanding of user interface design and style. She brings a detail-oriented approach to her online classes."
+    }
+  },
+  {
+    "id": 3,
+    "title": "JavaScript for Beginners",
+    "rating": 4.2,
+    "reviews": 50,
+    "enrolledStudents": 1800,
+    "creator": "P S Aakash",
+    "lastUpdated": "12/12/2021",
+    "language": "English",
+    "curriculum": [
+      {
+        "sectionTitle": "JavaScript Fundamentals",
+        "lessons": [
+          {"title": "Variables and Data Types", "duration": "08:00"},
+          {"title": "Functions", "duration": "15:00"}
+        ]
+      },
+      {
+        "sectionTitle": "Advanced Concepts",
+        "lessons": [
+          {"title": "DOM Manipulation", "duration": "20:00"},
+          {"title": "Event Handling", "duration": "18:00"}
+        ]
+      }
+    ],
+    "description": "This course provides a comprehensive introduction to JavaScript, helping you understand how to make your websites interactive.",
+    "instructor": {
+      "name": "P S Aakash",
+      "role": "Full Stack Developer",
+      "rating": 4.6,
+      "courses": 10,
+      "reviews": 2000,
+      "profileImage": "img/instructor/p_s_aakash.png",
+      "bio": "With a background in both front-end and back-end technologies, P S Aakash enjoys teaching with a focus on practical applications of JavaScript."
+    }
+  },
+  {
+    "id": 4,
+    "title": "PHP for Beginners",
+    "rating": 5,
+    "reviews": 100,
+    "enrolledStudents": 800,
+    "creator": "Ashraf Asif",
+    "lastUpdated": "03/03/2022",
+    "language": "English",
+    "curriculum": [
+      {
+        "sectionTitle": "Getting Started with PHP",
+        "lessons": [
+          {"title": "Introduction to PHP", "duration": "15:00"},
+          {"title": "Basic Syntax and Operators", "duration": "20:00"}
+        ]
+      },
+      {
+        "sectionTitle": "Working with Data",
+        "lessons": [
+          {"title": "Working with Forms", "duration": "25:00"},
+          {"title": "Databases and PHP", "duration": "30:00"}
+        ]
+      }
+    ],
+    "description": "Explore the basics of PHP for server-side programming, covering essential concepts needed to build dynamic web pages.",
+    "instructor": {
+      "name": "Ashraf Asif",
+      "role": "Senior PHP Developer",
+      "rating": 4.7,
+      "courses": 12,
+      "reviews": 1100,
+      "profileImage": "img/instructor/ashraf_asif.png",
+      "bio": "Ashraf Asif brings his extensive experience in PHP development to his teaching, helping students learn to build robust and efficient web applications."
+    }
+  }
+]
