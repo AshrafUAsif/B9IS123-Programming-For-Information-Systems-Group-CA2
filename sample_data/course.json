@@ -44,4 +44,13 @@
         "price": 10,
         "rating": 4.7
       },
+      {
+        "category": "Health",
+        "title": "Weight Loss and Nutrition Guide",
+        "image": "img/courses/health/2.jpg",
+        "instructor": "Chitra Prakash",
+        "reviews": 300,
+        "price": 15,
+        "rating": 4.5
+      },
 ]
