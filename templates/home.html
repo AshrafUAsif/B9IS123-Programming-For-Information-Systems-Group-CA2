@@ -99,7 +99,7 @@
                 </div>
             </div>
             <div class="row">
-                {% for course in courses %}
+                {% for course in courses[:4] %}
                 <div class="col-md-6 col-lg-3">
                     <div class="courses-item">
                         <a href="{{ url_for('course_details', course_id=course.id) }}" class="link">
