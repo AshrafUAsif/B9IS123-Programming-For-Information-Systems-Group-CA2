@@ -60,7 +60,30 @@ class Course(db.Model):
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+def create_db():
+    try:
+        with app.app_context():
+            db.create_all()
 
+            with open('sample_data/user.json') as user_file:
+                users = json.load(user_file)
+                for user_data in users:
+                    hashed_password = bcrypt.generate_password_hash(user_data['password']).decode('utf-8')
+                    user_data['password'] = hashed_password
+                    user = User(**user_data)
+                    db.session.add(user)
+
+            with open('sample_data/course.json') as course_file:
+                courses = json.load(course_file)
+                for course_data in courses:
+                    course = Course(**course_data)
+                    db.session.add(course)
+
+            db.session.commit()
+    except Exception as e:
+        print(f"Error creating database: {e}")
+
+create_db()
 
 
 @app.route('/')
