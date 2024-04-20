@@ -210,7 +210,24 @@ def course_detail(course_id):
     else:
         return "Only accessible via Postman", 403
 
-
+@app.route('/courses', methods=['POST'])
+def add_course():
+    if request.headers.get('Postman-Token'):
+        data = request.get_json()
+        new_course = Course(
+            title=data['title'],
+            category=data['category'],
+            instructor=data['instructor'],
+            rating=data['rating'],
+            reviews=data['reviews'],
+            price=data['price'],
+            image=data['image']
+        )
+        db.session.add(new_course)
+        db.session.commit()
+        return jsonify(new_course.serialize()), 201
+    else:
+        return "Only accessible via Postman", 403
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
