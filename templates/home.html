@@ -16,6 +16,41 @@
     <div></div>
 </div>
 <!-- page loader end -->
-
+<!-- main wrapper start -->
+<div class="main-wrapper">
+    <!-- header start -->
+    <header class="header">
+        <div class="container">
+            <div class="header-main d-flex justify-content-between align-items-center">
+                <div class="header-logo">
+                    <a href="{{ url_for('home') }}"><span>Edu</span>Pulse</a>
+                </div>
+                <button type="button" class="header-hamburger-btn js-header-menu-toggler">
+                    <span></span>
+                </button>
+                <div class="header-backdrop js-header-backdrop"></div>
+                <nav class="header-menu js-header-menu">
+                    <button type="button" class="header-close-btn js-header-menu-toggler">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu">
+                        <li class="menu-item"><a href="{{ url_for('home') }}">Home</a></li>
+                        <li class="menu-item">
+                            <a href="{{ url_for('courses') }}">courses</a>
+                        </li>
+                        {% if current_user.is_authenticated %}
+                        <li class="menu-item"><a href="{{ url_for('logout') }}">Logout</a></li>
+                        {% else %}
+                        <li class="menu-item"><a href="{{ url_for('login') }}">Login</a></li>
+                        {% endif %}
+                        {% if current_user.is_authenticated and current_user.is_admin %}
+                        <li class="menu-item"><a href="{{ url_for('admin') }}">Admin</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
 </body>
 </html>
