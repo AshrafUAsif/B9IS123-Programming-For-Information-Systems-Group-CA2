@@ -1,12 +1,26 @@
 [
     {
-        "fullname": "John Doe",
-        "email": "john@example.com",
-        "password": "password123"
+        "fullname": "Admin User",
+        "email": "admin@example.com",
+        "password": "securepassword123",
+        "is_admin": true
     },
     {
-        "fullname": "Ashraf Uddin",
-        "email": "ashraf@example.com",
-        "password": "ashraf123"
+        "fullname": "Md Ashraf Uddin",
+        "email": "ashraf@admin.com",
+        "password": "ashraf1234",
+        "is_admin": true
+    },
+    {
+        "fullname": "Chitra Prakash",
+        "email": "chitra@admin.com",
+        "password": "chitra1234",
+        "is_admin": true
+    },
+    {
+        "fullname": "P S Aakash Krishna",
+        "email": "aakash@admin.com",
+        "password": "aakash1234",
+        "is_admin": true
     }
 ]

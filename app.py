@@ -63,6 +63,7 @@ def load_user(user_id):
 def create_db():
     try:
         with app.app_context():
+            #db.drop_all()
             db.create_all()
 
             with open('sample_data/user.json') as user_file:
