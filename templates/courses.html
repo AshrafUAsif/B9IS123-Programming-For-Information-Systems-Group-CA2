@@ -11,24 +11,31 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/colors/color-2.css') }}" />
 </head>
 <body>
-      <!-- header start -->
-  <header class="header">
-    <div class="container">
-      <div class="header-main d-flex justify-content-between align-items-center">
-        <div class="header-logo">
-          <a href="{{ url_for('home') }}"><span>Edu</span>Pulse</a>
-        </div>
-        <nav class="header-menu js-header-menu">
-          <ul class="menu">
-            <li class="menu-item"><a href="{{ url_for('home') }}">home</a></li>
-            <li class="menu-item"><a href="{{ url_for('courses') }}">courses</a></li>
-            <li class="menu-item"><a href="{{ url_for('login') }}">log in</a></li>
-          </ul>
-        </nav>
+<!-- header start -->
+<header class="header">
+  <div class="container">
+    <div class="header-main d-flex justify-content-between align-items-center">
+      <div class="header-logo">
+        <a href="{{ url_for('home') }}"><span>Edu</span>Pulse</a>
       </div>
+      <nav class="header-menu js-header-menu">
+        <ul class="menu">
+          <li class="menu-item"><a href="{{ url_for('home') }}">home</a></li>
+          <li class="menu-item"><a href="{{ url_for('courses') }}">courses</a></li>
+          {% if current_user.is_authenticated %}
+          <li class="menu-item"><a href="{{ url_for('logout') }}">logout</a></li>
+          {% if current_user.is_admin %}
+          <li class="menu-item"><a href="{{ url_for('admin') }}">admin</a></li>
+          {% endif %}
+          {% else %}
+          <li class="menu-item"><a href="{{ url_for('login') }}">log in</a></li>
+          {% endif %}
+        </ul>
+      </nav>
     </div>
-  </header>
-  <!-- header end -->
+  </div>
+</header>
+<!-- header end -->
  <!-- breadcrumb start -->
 <div class="breadcrumb-nav">
   <div class="container">
