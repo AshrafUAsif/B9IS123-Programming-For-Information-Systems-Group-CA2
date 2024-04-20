@@ -71,6 +71,22 @@
                     <th>Price</th>
                 </tr>
             </thead>
+            <tbody>
+                {% for course in courses %}
+                <tr>
+                    <td>{{ course.id }}</td>
+                    <td>{{ course.title }}</td>
+                    <td>{{ course.category }}</td>
+                    <td>{{ course.instructor }}</td>
+                    <td>{{ course.rating }}</td>
+                    <td>{{ course.reviews }}</td>
+                    <td>{{ course.price }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 </div>
  </header>   
 </body>
