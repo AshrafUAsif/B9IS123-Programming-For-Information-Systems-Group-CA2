@@ -41,7 +41,6 @@
                     <th>Full Name</th>
                     <th>Email</th>
                     <th>Admin</th>
-                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -51,11 +50,6 @@
                     <td>{{ user.fullname }}</td>
                     <td>{{ user.email }}</td>
                     <td>{{ 'Yes' if user.is_admin else 'No' }}</td>
-                    <td>
-                        {% if not user.is_admin %}
-                        <a href="{{ url_for('delete_user', user_id=user.id) }}" class="btn btn-danger btn-sm">Delete</a>
-                        {% endif %}
-                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -75,7 +69,6 @@
                     <th>Rating</th>
                     <th>Reviews</th>
                     <th>Price</th>
-                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -88,9 +81,6 @@
                     <td>{{ course.rating }}</td>
                     <td>{{ course.reviews }}</td>
                     <td>{{ course.price }}</td>
-                    <td>
-                        <a href="{{ url_for('delete_course', course_id=course.id) }}" class="btn btn-danger">Delete</a>
-                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -103,7 +93,7 @@
         <p class="m-0 py-4">Copyright &copy;2024 EDUPULSE</p>
     </div>
 </footer>
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
 <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>
