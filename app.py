@@ -86,23 +86,16 @@ def create_db():
 
 create_db()
 
-def load_json_data():
-    # Assuming 'app.py' and 'sample_data' are in the same parent directory
-    dir_path = os.path.dirname(os.path.realpath(__file__))  # Get the directory of the script
-    json_path = os.path.join(dir_path, 'sample_data', 'course.json')  # Path to your course.json
-    with open(json_path, 'r') as file:
-        return json.load(file)
 
 @app.route('/')
 def home():
     courses = Course.query.all() 
-    courses = load_json_data()
+    #courses = load_json_data()
     return render_template('home.html', courses=courses)
 
 @app.route('/courses')
 def courses():
     courses = Course.query.all() 
-    courses = load_json_data()
     return render_template('courses.html', courses=courses)
 
 @app.route('/course-details')
