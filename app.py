@@ -115,6 +115,10 @@ def admin():
 def about_html():
     return render_template('about.html')
 
+@app.route('/contact.html')
+def contact():
+    return render_template('contact.html')
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
